@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TabPane prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cz.uhk.fim.pro2.playlist.controller.MainController">
+    <Tab text="Playlist">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="800.0">
+            <Button fx:id="btnSaveSongs" alignment="CENTER" contentDisplay="TOP" layoutX="681.0" layoutY="324.0" mnemonicParsing="false" text="Uložit skladby" AnchorPane.leftAnchor="670.0" AnchorPane.rightAnchor="10.0">
+                <font>
+                    <Font name="Arial" size="12.0" />
+                </font>
+            </Button>
+            <Label alignment="CENTER" contentDisplay="TOP" layoutX="694.0" layoutY="41.0" text="Celková délka:" AnchorPane.leftAnchor="670.0" AnchorPane.rightAnchor="10.0">
+                <font>
+                    <Font name="Arial" size="12.0" />
+                </font>
+            </Label>
+            <Label fx:id="lblTotalTime" alignment="CENTER" contentDisplay="TOP" layoutX="694.0" layoutY="80.0" text="0" AnchorPane.leftAnchor="670.0" AnchorPane.rightAnchor="10.0">
+                <font>
+                    <Font name="Arial Black" size="12.0" />
+                </font>
+            </Label>
+            <TableView fx:id="tblPlaylist" prefHeight="500.0" prefWidth="650.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                <columns>
+                    <TableColumn fx:id="colOrder" prefWidth="50.0" sortable="false" text="Pořadí" />
+                    <TableColumn fx:id="colName" prefWidth="250.0" sortable="false" text="Název" />
+                    <TableColumn fx:id="colInterpret" prefWidth="250.0" sortable="false" text="Interpret" />
+                    <TableColumn fx:id="colTime" prefWidth="100.0" sortable="false" text="Délka" />
+                </columns>
+            </TableView>
+            <Button fx:id="btnDeleteSong" alignment="CENTER" contentDisplay="TOP" layoutX="697.0" layoutY="246.0" mnemonicParsing="false" text="Odebrat skladbu" AnchorPane.leftAnchor="670.0" AnchorPane.rightAnchor="10.0">
+                <font>
+                    <Font name="Arial" size="12.0" />
+                </font>
+            </Button>
+            <Button fx:id="btnMoveUp" layoutX="698.0" layoutY="380.0" mnemonicParsing="false" text="Nahoru" AnchorPane.leftAnchor="670.0" AnchorPane.rightAnchor="10.0">
+                <font>
+                    <Font name="Arial" size="12.0" />
+                </font>
+            </Button>
+            <Button fx:id="btnMoveDown" layoutX="700.0" layoutY="422.0" mnemonicParsing="false" text="Dolu" AnchorPane.leftAnchor="670.0" AnchorPane.rightAnchor="10.0" />
+        </AnchorPane>
+    </Tab>
+    <Tab text="Přidat skladbu">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <Button fx:id="btnAddSong" layoutX="45.0" layoutY="475.0" mnemonicParsing="false" text="Přidat" />
+            <Label layoutX="45.0" layoutY="40.0" prefHeight="20.0" prefWidth="50.0" text="Název:" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0" />
+            <Label layoutX="45.0" layoutY="99.0" text="Interpret:" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="100.0" />
+            <TextField fx:id="addName" layoutX="101.0" layoutY="36.0" prefHeight="20.0" prefWidth="300.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="50.0" />
+            <TextField fx:id="addInterpret" layoutX="117.0" layoutY="95.0" prefHeight="20.0" prefWidth="300.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="100.0" />
+            <Label layoutX="61.0" layoutY="149.0" text="Délka:" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="150.0" />
+            <TextField fx:id="addMinutes" layoutX="133.0" layoutY="138.0" prefHeight="20.0" prefWidth="60.0" promptText="minuty" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="150.0" />
+            <TextField fx:id="addSeconds" layoutX="202.0" layoutY="146.0" prefHeight="20.0" prefWidth="60.0" promptText="sekundy" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="150.0" />
+        </AnchorPane>
+    </Tab>
+</TabPane>
